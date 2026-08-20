@@ -1,240 +1,335 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/style (3).css">
-    <link rel="website icon" href="https://img.icons8.com/ios-filled/50/1A1A1A/aperture.png">
-    <title>Youssef_El-Neel</title>
-</head>
+    <!-- Meta Descriptions for SEO -->
+    <meta
+      name="description"
+      content="High-end modern developer portfolio showcasing projects, skills, and experience."
+    />
 
-<body>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <header>
-        <a href="#" class="logo">Youssef</a>
-        <nav class="navigation">
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="header">
+      <div class="container nav-wrapper">
+        <a href="#hero" class="brand">Youssef El-Neel</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Dark/Light Mode"
+          >
+            <svg
+              class="sun-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="moon-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
         </nav>
+      </div>
     </header>
 
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <!-- ===== HERO SECTION ===== -->
+      <section id="hero" class="hero section">
+        <!-- Decorative gradient orb in background -->
+        <div class="bg-orb"></div>
 
-    <section class="main">
-        <div>
-            <h2>Hello, I'm Youssef<br><span>Photographer & Quality control engineer</span></h2>
-            <h3>I capture moments that change how you see the world</h3>
-            <a href="#projects" class="main-btn">View my work</a>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/youssef-alaa-elneel" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://web.facebook.com/yuyu.elneel" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/youssef_alaa_elneel/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/201552688221" target="_blank"><i class="fab fa-whatsapp" id="w"></i></a>
-            </div>
+        <div class="container hero-content">
+          <h1 class="hero-title reveal">
+            <span class="block">Full-Stack</span>
+            <span class="block accent-text">Developer.</span>
+          </h1>
+          <p class="hero-subtitle reveal delay-1">
+            I build modern, high-performance and AI-powered web applications
+            with a focus on polished UI architectures and seamless user
+            experiences.
+          </p>
+          <div class="hero-cta reveal delay-2">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="cards" id="services">
-        <h2 class="title">Services</h2>
-        <div class="content">
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-edit"></i>
-                </div>
-                <div class="info">
-                    <h3>Website Design & Front-End Development </h3>
-                    <p>Design and develop responsive, well-structured websites with attention to layout, usability, and
-                        performance</p>
-                </div>
+      <!-- ===== ABOUT SECTION ===== -->
+      <section id="about" class="about section">
+        <div class="container asymmetric-grid">
+          <div class="about-text reveal">
+            <h2 class="section-title">About Me.</h2>
+            <p>
+              Hi, I'm Youssef ALaa El-Neel . I’m a Full-Stack Developer
+              experienced in building responsive, cross-platform web and mobile
+              applications. Whether you need a robust system from scratch, a
+              pixel-perfect interface, or smart AI features to elevate your
+              product, I can help bring your vision to life.
+            </p>
+            <p>
+              I specialize in integrating modern AI capabilities to give
+              applications a competitive edge, powered by technologies like the
+              MERN stack, Next.js, Flutter, and React Native. I pride myself on
+              keen attention to detail, strict adherence to deadlines, and clear
+              communication from start to finish.
+            </p>
+          </div>
+          <div class="about-visual reveal delay-1">
+            <!-- Glassmorphic visual element representing the user -->
+            <div class="glass-card portrait-placeholder">
+              <!-- مسار صورتك هنا -->
+              <img
+                src="https://res.cloudinary.com/dvarfmirm/image/upload/v1787238334/myImage2_ogluvk.jpg"
+                alt="Youssef El-Neel"
+                class="profile-img"
+              />
             </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <div class="info">
-                    <h3>Photographer</h3>
-                    <p>Photography services including planning and executing photo shoots with proper camera settings,
-                        followed by professional editing and post-production</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="info">
-                    <h3>Quality Control & Food Safety</h3>
-                    <p>Ensure product quality and food safety by monitoring production processes, conducting
-                        inspections, and ensuring compliance with quality standards</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="projects" id="projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/IMG_20220916_224731_600.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category"></p>
-                    <strong class="project-title">
-                        <span>Al-Azhar Mosque </span>
-                        <a href="https://www.instagram.com/p/CilODf3rb5u/?img_index=1" target="_blank"
-                            class="more-details">Show More</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/IMG_20210304_222223_846.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category"></p>
-                    <strong class="project-title">
-                        <span>Aswan</span>
-                        <a href="https://www.instagram.com/p/CMApNiwLQOk/" target="_blank" class="more-details">Show
-                            More</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/IMG_20220222_220144_900.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category"></p>
-                    <strong class="project-title">
-                        <span>Abo-simbel</span>
-                        <a href="https://www.instagram.com/p/CaStD3KrnmO/?img_index=1" target="_blank"
-                            class="more-details">Show More</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/IMG_20220414.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category"></p>
-                    <strong class="project-title">
-                        <span>Moments</span>
-                        <a href="https://www.instagram.com/p/CcdYUntLk8H/" target="_blank" class="more-details">Show
-                            More</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/S1S2.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">websites</p>
-                    <strong class="project-title">
-                        <span>Canon website</span>
-                        <a href="https://youssef-alaa-elneel.github.io/Canon-Website/" class="more-details">More
-                            details</a>
-                    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/Qodify.png" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">websites</p>
-                    <strong class="project-title">
-                        <span>Qodify website</span>
-                        <a href="#" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div>
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <img src="images/work6.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Script Writing & Video Production</p>
-                    <strong class="project-title">
-                        <span>Internet</span>
-                        <a href="#" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div> -->
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <img src="images/work6.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Script Writing & Video Production</p>
-                    <strong class="project-title">
-                        <span>Internet</span>
-                        <a href="#" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div> -->
-            <!-- <div class="project-card">
-                <div class="project-image">
-                    <img src="images/work6.jpg" />
-                </div>
-                <div class="project-info">
-                    <p class="project-category">Script Writing & Video Production</p>
-                    <strong class="project-title">
-                        <span>Internet</span>
-                        <a href="#" class="more-details">More details</a>
-                    </strong>
-                </div>
-            </div> -->
+      <!-- ===== PROJECTS SECTION ===== -->
+      <section id="projects" class="projects section">
+        <div class="container">
+          <h2 class="section-title text-center reveal">Selected Works.</h2>
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card reveal">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1780854435/image-D_eai24a.jpg"
+                  alt="ChefAI"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">ChefAI</h3>
+                <p class="project-desc">
+                  A full-stack application powered by custom RAG and Vision AI
+                  for smart recipe generation and chat management.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card reveal delay-1">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1787150948/Overview3_ghzodb.jpg"
+                  alt="AI COMMUNITY PLATFORM"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">Rabta</h3>
+                <p class="project-desc">
+                  A full-stack social platform powered by advanced RAG,
+                  featuring semantic search, AI assistants, and smart
+                  summarization.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card reveal">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1777557087/Qodify_v1qyqr.png"
+                  alt="INTERACTIVE WEB APP"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">Qodify Quiz App</h3>
+                <p class="project-desc">
+                  A dynamic and responsive web application for creating quizzes,
+                  featuring instant results and a user-friendly experience.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+            <!-- Project 4 -->
+            <article class="project-card reveal">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1787149592/11_vdprzs.png"
+                  alt="DESKTOP POS SYSTEM"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">CartyX</h3>
+                <p class="project-desc">
+                  A comprehensive desktop point-of-sale system built with
+                  Electron, React and Node.js for Smooth cashier and inventory
+                  management.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card reveal delay-1">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1787148992/Turpo_Cover_xpfu31.jpg"
+                  alt="CAR SHOWROOM WEBSITE"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">Turbo Cars</h3>
+                <p class="project-desc">
+                  A modern and responsive car showroom website featuring a clean
+                  user interface and smooth navigation experience.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card reveal">
+              <div class="card-image">
+                <img
+                  src="https://res.cloudinary.com/dvarfmirm/image/upload/v1787149093/971shots_so_gytk8o.jpg"
+                  alt="MOBILE APPLICATION"
+                  class="project-image"
+                />
+              </div>
+              <div class="card-content">
+                <h3 class="project-title">Cookly</h3>
+                <p class="project-desc">
+                  A cross-platform recipe mobile application built with Flutter,
+                  delivering a clean UI and seamless user navigation.
+                </p>
+                <a href="#" class="project-link">View Project &rarr;</a>
+              </div>
+            </article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="cards contact" id="contact">
-        <h2 class="title">Let's work together</h2>
-        <div class="content">
-            <a href="https://wa.me/201552688221" target="_blank">
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="info">
-                        <h3>Phone</h3>
-                        <p>+201552688221</p>
-                    </div>
-                </div>
-            </a>
-            <a href="mailto:youssefalaaelneel@gmail.com">
-                <div class="card">
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="info">
-                        <h3>Email</h3>
-                        <p>youssefalaaelneel@gmail.com</p>
-                    </div>
-                </div>
-            </a>
+      <!-- ===== SKILLS SECTION ===== -->
+      <section id="skills" class="skills section">
+        <div class="container">
+          <h2 class="section-title reveal">Expertise.</h2>
+          <div class="skills-wrapper reveal delay-1">
+            <div class="skill-pill">JavaScript (ES6+)</div>
+            <div class="skill-pill">TypeScript</div>
+            <div class="skill-pill">React & Next.js</div>
+            <div class="skill-pill">CSS / Bootstrap / Tailwind</div>
+            <div class="skill-pill">React Native</div>
+            <div class="skill-pill">Node.js</div>
+            <div class="skill-pill">HTML</div>
+            <div class="skill-pill">Docker</div>
+            <div class="skill-pill">RAG</div>
+            <div class="skill-pill">MongoDB</div>
+            <div class="skill-pill">Flutter / Dart</div>
+            <div class="skill-pill">Git & GitHub</div>
+            <div class="skill-pill">Express.js</div>
+            <div class="skill-pill">Electron</div>
+            <div class="skill-pill">LangChain</div>
+          </div>
         </div>
-    </section>
+      </section>
 
+      <!-- ===== CONTACT SECTION ===== -->
+      <section id="contact" class="contact section">
+        <div class="container text-center">
+          <h2 class="section-title reveal">Let's Connect.</h2>
+          <p class="contact-subtitle reveal delay-1">
+            <!-- Looking to start a project or just want to say hi? -->
+            Ready to bring your ideas to life? Let's make it happen.
+          </p>
+          <a
+            href="mailto:youssefalaaelneel@gmail.com"
+            class="btn btn-primary reveal delay-2"
+            >Say Hello</a
+          >
+
+          <div class="social-links reveal delay-2">
+            <a
+              href="https://www.linkedin.com/in/youssef-alaa-elneel/"
+              class="social-link"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+            <a href="https://github.com/Youssef-Alaa-Elneel" class="social-link"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+            <a href="#" class="social-link"
+              ><i class="fa-brands fa-instagram"></i> Instagram</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Youssef_ElNeel</span></p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/youssef-alaa-elneel" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://web.facebook.com/yuyu.elneel" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/youssef_alaa_elneel/" target="_blank"><i
-                    class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/201552688221" target="_blank"><i class="fab fa-whatsapp" id="w"></i></a>
-
-        </div>
+      <div class="container text-center">
+        <p>&copy; 2026 Youssef Elneel. Built with minimalist precision.</p>
+      </div>
     </footer>
 
-</body>
-
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
 </html>
