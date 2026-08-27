@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youssef_El-Neel - Project Details</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="website icon"
+      href="https://img.icons8.com/ios-filled/50/1A1A1A/aperture.png"
+    />
+  </head>
+  <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header class="header">
+      <div class="container nav-wrapper">
+        <a href="index.html" class="brand">Youssef El-Neel</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html#projects" class="nav-link">&larr; Back to Portfolio</a></li>
+          </ul>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle Dark/Light Mode"
+          >
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <section class="project-details section">
+        <div class="bg-orb"></div>
+        <div class="container text-center reveal">
+          <h1 class="hero-title" id="dynamic-title">Loading...</h1>
+          <p class="project-details-desc" id="dynamic-desc">
+            Loading...
+          </p>
+          
+          <div class="project-gallery" id="dynamic-gallery">
+            <!-- Images will be injected here automatically by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container text-center">
+        <p>&copy; 2026 Youssef Elneel. Built with minimalist precision.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Add data file before main script -->
+    <script src="projects-data.js?v=1.1"></script>
+    <script src="script.js?v=1.1"></script>
+  </body>
+</html>

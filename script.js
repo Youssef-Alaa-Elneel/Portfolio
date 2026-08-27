@@ -61,14 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
     
     navLinks.forEach(link => {
         link.addEventListener("click", function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute("href");
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: "smooth"
-                });
+            // Only use smooth scroll for internal anchors starting with '#'
+            if (targetId && targetId.startsWith("#")) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+                }
             }
         });
     });
@@ -95,5 +98,71 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    /* ===== DYNAMIC PROJECT ROUTING & RENDERING ===== */
+    
+    // 1. Save title and description before navigating
+    const projectLinks = document.querySelectorAll(".project-link");
+    projectLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            const href = this.getAttribute("href");
+            // If the link goes to our dynamic project.html
+            if (href && href.startsWith("project.html")) {
+                const card = this.closest(".project-card");
+                if (card) {
+                    const title = card.querySelector(".project-title").innerText;
+                    const desc = card.querySelector(".project-desc").innerText;
+                    localStorage.setItem("currentProjectTitle", title);
+                    localStorage.setItem("currentProjectDesc", desc);
+                }
+            }
+        });
+    });
+
+    // 2. Render content if we are on project.html
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+
+    if (projectId && document.getElementById("dynamic-title")) {
+        // Read text from local storage
+        const title = localStorage.getItem("currentProjectTitle");
+        const desc = localStorage.getItem("currentProjectDesc");
+        
+        if (title) {
+            document.getElementById("dynamic-title").innerText = title;
+            document.title = "Youssef_El-Neel - " + title;
+        }
+        if (desc) {
+            document.getElementById("dynamic-desc").innerText = desc;
+        }
+
+        // Load images from projects-data.js (if available)
+        if (typeof projectsData !== 'undefined' && projectsData[projectId]) {
+            const projectData = projectsData[projectId];
+            const gallery = document.getElementById("dynamic-gallery");
+            
+            // Clear loading state or previous content
+            gallery.innerHTML = "";
+            
+            if (projectData.images && projectData.images.length > 0) {
+                projectData.images.forEach(imgSrc => {
+                    const img = document.createElement("img");
+                    img.src = imgSrc;
+                    img.alt = (title || "Project") + " Screenshot";
+                    img.className = "gallery-image";
+                    
+                    // Handle broken images gracefully
+                    img.onerror = function() {
+                        const fallbackDiv = document.createElement("div");
+                        fallbackDiv.className = "gallery-image image-placeholder-fallback";
+                        fallbackDiv.innerHTML = `<span><i class="fa-solid fa-image-slash" style="font-size: 2rem; margin-bottom: 0.5rem;"></i><br>Image could not be loaded</span>`;
+                        this.replaceWith(fallbackDiv);
+                    };
+
+                    gallery.appendChild(img);
+                });
+            }
+        }
+    }
 
 });

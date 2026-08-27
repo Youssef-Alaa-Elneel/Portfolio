@@ -100,6 +100,7 @@ a {
     transition: all var(--transition-fast);
     cursor: pointer;
     border: none;
+    text-align: center;
 }
 
 .btn-primary {
@@ -541,6 +542,57 @@ a {
     transition-delay: 0.2s;
 }
 
+/* ==========================================================================
+   PROJECT DETAILS PAGE
+   ========================================================================== */
+.project-details {
+    padding-top: 120px;
+    min-height: 80vh;
+}
+
+.project-details-desc {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin: 1.5rem auto 3rem auto;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .gallery-image {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.image-placeholder-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    min-height: 250px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .asymmetric-grid {
@@ -559,5 +611,25 @@ a {
 
     .hero-cta {
         flex-direction: column;
+    }
+
+    /* Project Details Mobile Adjustments */
+    .project-details {
+        padding-top: 120px;
+    }
+
+    .project-details-desc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+
+    .project-gallery {
+        gap: 1.5rem;
+    }
+
+    .gallery-image {
+        padding: 6px;
+        border-radius: 8px;
     }
 }
