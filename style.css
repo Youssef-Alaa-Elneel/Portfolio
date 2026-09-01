@@ -243,7 +243,7 @@ a {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 110px;
 }
 
 .bg-orb {
@@ -595,6 +595,10 @@ a {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
     .asymmetric-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
