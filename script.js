@@ -27,6 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
         htmlElement.setAttribute("data-theme", newTheme);
         localStorage.setItem("theme", newTheme);
+        
+        // Sync particle background colors if particles are running
+        if (typeof updateParticleColors === 'function') {
+            updateParticleColors(newTheme);
+        }
     });
 
     /* ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS ===== */
