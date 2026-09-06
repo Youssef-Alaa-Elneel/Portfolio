@@ -617,6 +617,11 @@ a {
         flex-direction: column;
     }
 
+    .social-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
     /* Project Details Mobile Adjustments */
     .project-details {
         padding-top: 120px;
@@ -635,5 +640,46 @@ a {
     .gallery-image {
         padding: 6px;
         border-radius: 8px;
+    }
+}
+
+/* ==========================================================================
+   WHATSAPP FAB
+   ========================================================================== */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #ffffff !important;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.whatsapp-fab i {
+    font-size: 1.3rem;
+}
+
+.whatsapp-fab:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6);
+    background-color: #20BA56;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-fab {
+        bottom: 20px;
+        right: 20px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
     }
 }

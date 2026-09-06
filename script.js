@@ -131,6 +131,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (title) {
             document.getElementById("dynamic-title").innerText = title;
             document.title = "Youssef_El-Neel - " + title;
+
+            // Set WhatsApp link dynamically
+            const waFab = document.getElementById("whatsapp-fab");
+            if (waFab) {
+                const waNumber = "201552688221";
+                const message = `أهلاً يوسف، أنا مهتم بطلب عمل مشروع مماثل لمشروع ${title}`;
+                waFab.href = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+            }
         }
         if (desc) {
             document.getElementById("dynamic-desc").innerText = desc;
